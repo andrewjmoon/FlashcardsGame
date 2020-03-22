@@ -31,7 +31,12 @@ const DeckView = ({ navigation }) => {
 
   return (
     <View style={[styles.container]}>
-      <View style={[styles.deckContainer, { padding: 30, marginBottom: 40 }]}>
+      <View
+        style={[
+          styles.deckContainer,
+          { height: 70, padding: 30, marginBottom: 40 }
+        ]}
+      >
         <Text style={{ textAlign: 'center', fontSize: 35 }}>{deck.title}</Text>
 
         <Text style={styles.cardText}>{deck.questions.length} cards</Text>
@@ -86,6 +91,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 30,
     borderWidth: 0.5,
+    height: 50,
     backgroundColor: 'lightblue'
   },
   deckText: {

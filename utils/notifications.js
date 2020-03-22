@@ -5,22 +5,22 @@ import * as Permissions from 'expo-permissions';
 
 const NOTIFICATION_KEY = 'Flashcard:notifications';
 
-export function getDailyReminderValue() {
+export const getDailyReminderValue = () => {
   return {
     today: 'Hey, This is your reminder to study today!'
   };
-}
+};
 
-export function clearLocalNotification() {
+export const clearLocalNotification = () => {
   return AsyncStorage.removeItem(NOTIFICATION_KEY).then(
     Notifications.cancelAllScheduledNotificationsAsync
   );
-}
+};
 
 export const createNotification = () => {
   return {
-    title: 'Flashcard Reminder',
-    body: "👋 don't forget to study today!",
+    title: 'Flashcard Game Reminder',
+    body: 'Hey, This is your reminder to study today!',
     ios: {
       sound: true
     },

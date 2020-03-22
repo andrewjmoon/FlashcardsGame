@@ -8,12 +8,12 @@ import thunk from 'redux-thunk';
 import { logger } from 'redux-logger';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 import Constants from 'expo-constants';
 import { blue, white, salmon } from './utils/colors';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AddDeck, DeckView, AddCard, Quiz, About, Reset } from './views';
-import { createStackNavigator } from 'react-navigation-stack';
-import { setLocalNotification } from './utils/helpers';
+import { setLocalNotification } from './utils/notifications';
 
 const enhancers = [applyMiddleware(thunk, logger)];
 

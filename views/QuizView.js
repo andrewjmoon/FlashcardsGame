@@ -9,7 +9,7 @@ import {
 import { Container, Button } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
-import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
+import { clearLocalNotification, setLocalNotification } from '../utils/notifications';
 import {
   darkBlue,
   salmon,

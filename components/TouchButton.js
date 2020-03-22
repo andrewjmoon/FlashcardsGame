@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { textGray, white, darkGray, gray } from '../utils/colors';
+import { white, green, gray } from '../utils/colors';
 
 export default function TouchButton({
   children,
@@ -29,28 +29,29 @@ export default function TouchButton({
 const styles = StyleSheet.create({
   btnContainer: {
     alignItems: 'center',
-    marginBottom: 20
+    marginBottom: 25,
+    marginTop: 10
   },
   btn: {
-    width: 200,
-    height: 50,
+    width: 180,
+    height: 40,
     backgroundColor: 'red',
     borderRadius: 5,
     justifyContent: `center`,
     alignItems: `center`,
-    borderWidth: 1,
-    borderColor: '#999'
+    borderWidth: 3,
+    borderColor: '#999999'
   },
   btnDisabled: {
     backgroundColor: gray,
-    borderColor: darkGray
+    borderColor: green
   },
   btnText: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     color: white
   },
   btnTextDisabled: {
-    color: darkGray
+    color: green
   }
 });
